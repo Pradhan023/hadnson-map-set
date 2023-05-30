@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps and Sets</title>
+</head>
+<body>
+    <center style="font-size: 30px;"><h1><mark>Map and Sets</mark></h1></center>
+    <pre>
+        <h1>     Q1.  Problem:
+          You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+          Your task is to remove all the duplicate occurrences of characters in the string.
+            
+          Input:
+          abcadeecfb
+            
+          Output:
+          abcdef"
+
+    Ans. var str = "abcadeecfb".split("");
+         var n = str.length;
+         function removeDuplicate(str, n)
+             {
+                 var index = 0;
+     
+                 for (var i = 0; i &lt n; i++)
+                 {
+                     var j;
+                     for (j = 0; j &lt i; j++)
+                     {
+                         if (str[i] == str[j])
+                         {
+                             break;
+                         }
+                     }
+     
+                     if (j == i)
+                     {
+                         str[index++] = str[i];
+                     }
+                 }
+             
+                 return str.join("").slice(str, index);
+             }
+        
+             console.log((removeDuplicate(str, n)));
+
+
+    </h1>
+    </pre>
+</body>
+</html>
